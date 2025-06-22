@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #afafaf;
+        }
+        .form-container {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1><center><u>Galgotias University MCA Registration Form</u></center></h1>
+    <div class="form-container">
+        <form action="submit_form.php">
+            <label for="name">Full Name :</label>
+            <input type="text" name="name" required><br><br>
+
+            <label for="email">Email :</label>
+            <input type="text" name="email" required><br><br>
+
+            <label for="phone_number">Phone Number :</label>
+            <input type="text" name="phone_number" required><br><br>
+
+            <label for="dob">Date of Birth :</label>
+            <input type="date" name="dob" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="select please">Please Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+
+            <label for="address">Address :</label>
+            <textarea id="address" name="address" rows="5" cols="25" placeholder="Enter your full address"></textarea><br><br>
+            
+            <label>Course:</label>
+            <input type="radio" id="course_mca" name="course[]" value="MCA">
+            <label for="course_mca">MCA</label>
+
+            <input type="radio" id="course_bca" name="course[]" value="BCA">
+            <label for="course_bca">BCA</label>
+            
+            <input type="radio" id="course_bba" name="course[]" value="B.Tech">
+            <label for="course_bba">B.Tech</label><br><br>
+
+            <label for="programming_languages">Programming Languages</label><br>
+            <input type="checkbox" id="java" name="languages[]" value="Java">
+            <label for="java">Java</label>
+
+            <input type="checkbox" id="python" name="languages[]" value="Python">
+            <label for="python">Python</label>
+
+            <input type="checkbox" id="php" name="languages[]" value="PHP">
+            <label for="php">PHP</label>
+
+            <input type="checkbox" id="html" name="languages[]" value="HTML">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="c_cpp" name="languages[]" value="C & C++">
+            <label for="c_cpp">C & C++</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
