@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country and Capital Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h2><u>Country and Capital Selector</u></h2>
+            <label for="countryList">Select a Country:</label>
+            <select id="countryList" onchange="showCapital()"> 
+                <option value="">Please Select</option>
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="DUBAI">DUBAI</option>
+                <option value="Japan">Japan</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+    </select>
+
+    <p><span id="capital">Please select a country</span></p>
+
+        </div>
+    </div>
+
+    <script>
+        function showCapital() {
+            const country = document.getElementById("countryList").value;
+            const capitalMap = {
+                "INDIA": "Delhi",
+                "USA": "Washington, D.C.",
+                "DUBAI": "Abu Dhabi",
+                "Japan": "Tokyo",
+                "Australia": "Canberra",
+                "Germany": "Berlin"
+            };
+            document.getElementById("capital").textContent = capitalMap[country] || "";
+        }
+    </script>
+</body>
+</html>
